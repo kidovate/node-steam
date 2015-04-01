@@ -1,5 +1,5 @@
 var fs = require('fs');
-var Steam = require('steam');
+var Steam = require('./');
 
 // if we've saved a server list, use it
 if (fs.existsSync('servers')) {
