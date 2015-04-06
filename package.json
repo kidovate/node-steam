@@ -15,9 +15,10 @@
     "adm-zip": "*",
     "buffer-crc32": "*",
     "bytebuffer": "*",
-    "protobufjs": "*"
+    "protobufjs": "*",
+    "ursa": "^0.8.4"
   },
   "engines": {
-    "node": ">=0.12"
+    "node": ">=0.10"
   }
 }
