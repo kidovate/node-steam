@@ -183,6 +183,10 @@ The single object parameter of the `callback` has the requested SteamIDs as prop
 
 Requests friend data. `steamIDs` must be an array. `requestedData` is optional – if falsy, defaults to `EClientPersonaStateFlag.PlayerName | EClientPersonaStateFlag.Presence | EClientPersonaStateFlag.SourceID | EClientPersonaStateFlag.GameExtraInfo`. The response, if any, should arrive in the ['user' event](#user).
 
+### setIgnoreFriend(steamID, setIgnore, callback)
+
+Blocks a friend if `setIgnore` is `true`, unblocks them if it's `false`. The first argument to `callback` will be `EResult`.
+
 ### trade(steamID)
 
 Sends a trade request to the specified user.
@@ -288,6 +292,9 @@ Some activity in your group list. For example, `EClanRelationship.Invited` means
 
 ### 'message'
 Same arguments as the above two, captures both events. In case of a friend message, the fourth argument will be undefined.
+
+### 'friendMsgEchoToSender'
+Same as '[friendMsg](#friendmsg)', except it is a message you send to a friend on another client.
 
 ### 'chatEnter'
 * SteamID of the chat room
